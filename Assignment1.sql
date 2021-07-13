@@ -34,7 +34,7 @@ SELECT  Name, Color  FROM Production.Product WHERE Color IS NOT NULL ;
 
 --Write a query that generates the following result set  from Production.Product: Name And Color
 
-SELECT 'NAME: '+ Name+ ' -- COLOR: ' + Color AS 'Name And Color' FROM Production.Product WHERE Color IN ('Black', 'Silver') ;
+SELECT 'NAME: '+ Name+ ' -- COLOR: ' + Color AS 'Name And Color' FROM Production.Product  ;
 
 
 --Write a query to retrieve the to the columns ProductID and Name from the Production.Product table filtered by ProductID from 400 to 500
@@ -83,7 +83,7 @@ SELECT ProductSubcategoryID, Color FROM Production.Product WHERE ProductSubcateg
 
 
 
---Something is ìwrongî with the WHERE clause in the following query. We do not want any Red or Black products from any SubCategory than those with the value of 1 in column ProductSubCategoryID, unless they cost between 1000 and 2000.
+--Something is ‚Äúwrong‚Äù with the WHERE clause in the following query. We do not want any Red or Black products from any SubCategory than those with the value of 1 in column ProductSubCategoryID, unless they cost between 1000 and 2000.
 
 
 SELECT ProductSubCategoryID
@@ -94,7 +94,7 @@ SELECT ProductSubCategoryID
 WHERE ((Color IN ('Red','Black') AND ProductSubCategoryID = 1 )  AND (ListPrice BETWEEN 1000 AND 2000)) 
 OR ((Color NOT IN ('Red','Black') AND ProductSubCategoryID != 1 )  AND (ListPrice	NOT BETWEEN 1000 AND 2000)) 
 ORDER BY ProductSubCategoryID ASC
-†
+¬†
 
 
 --Write the query in the editor and execute it. Take a look at the result set and then adjust the query so it delivers the following result set.
